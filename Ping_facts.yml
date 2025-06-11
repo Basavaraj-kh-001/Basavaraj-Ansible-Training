@@ -5,4 +5,4 @@
      ping: 
    - name: Display all facts
      debug:
-       vars: ansible_facts
+      vars: ansible_facts
