@@ -2,4 +2,7 @@
   gather_facts: yes
   tasks:
    - name: linux ping 
-     ping:
+     ping: 
+     -name: Display all facts
+      debug:
+        vars: ansible_facts
