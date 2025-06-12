@@ -1,10 +1,11 @@
 - name: Copy, edit and delete a file
-  hosts: test02
+  hosts: ansibletest02
   tasks:
    - name: copy file basvaraj.txt
      ansible.builtin.copy:
       src: /tmp/basvaraj.txt
       dest: /tmp
+      mod: '664'
 
    - name: add some data the file basvaraj.txt
      ansible.builtin.lineinfile:
