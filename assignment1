@@ -1,0 +1,20 @@
+- name: Copy, edit and delete a file
+  hosts: test02
+  tasks:
+   - name: copy file basvaraj.txt
+     ansible.builtin.copy:
+      src: /tmp/basvaraj.txt
+      dest: /tmp
+
+   - name: add some data the file basvaraj.txt
+     ansible.builtin.lineinfile:
+      path: /tmp/basvaraj.txt
+      line: 'updating the file with some text to test'
+
+
+
+   - name: deleting the basvaraj.txt file from test02
+     ansible.builtin.file:
+      path: /tmp/basvraj.txt
+      state: absent
+
