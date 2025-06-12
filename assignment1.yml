@@ -4,7 +4,7 @@
    - name: copy file basvaraj.txt
      ansible.builtin.copy:
       src: /tmp/basvaraj.txt
-      dest: /tmp
+      dest: /tmp/basvaraj.txt
       mod: '664'
      delegate_to: localhost
 
