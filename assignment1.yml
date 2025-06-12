@@ -6,7 +6,8 @@
       src: /home/ansadm/basvaraj.txt
       dest: /tmp/basvaraj.txt
       mod: '664'
-     delegate_to: ansibletest01
+     delegate_to: ansibletest01.main.ito
+
 
    - name: add some data the file basvaraj.txt
      ansible.builtin.lineinfile:
