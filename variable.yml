@@ -1,0 +1,14 @@
+- name: Create a variable, display the value and demonstrate ignore_errors
+  hosts: localhost
+
+  vars: 
+   greet: "Welcome to Ansible!"
+
+  tasks:
+   - name: display the content of the variable greet
+     ansible.builtin.debug:
+      msg: "{{ greet }}"
+
+   - name: demonstrate ignore_errors
+     ansible.builtin.command: /bin/somecommand
+     ignore_errors: yes
