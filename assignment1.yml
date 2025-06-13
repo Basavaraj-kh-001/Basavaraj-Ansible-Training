@@ -5,7 +5,7 @@
      ansible.builtin.copy:
       src: /home/ansadm/test1.txt
       dest: /tmp/test1.txt
-      mod: '664'
+      mode: '664'
      delegate_to: ansibletest01.main.ito
 
 
